@@ -305,7 +305,7 @@ if __name__ == "__main__":
     output_audio=np.zeros(len(audio)).astype(np.float32)
     if audio.ndim > 1:
         audio = audio[:, 0]
-  #  sf.write('p232_003.wav',audio,fs)
+ 
     block_num=len(audio)//g_frame_size-1
     for i in range(block_num):
         input_data=audio[i*g_frame_size:i*g_frame_size+g_frame_size]*32768
